@@ -15,10 +15,8 @@ class AttendanceController extends Controller
 {
     public function index(Request $request)
     {
-        // cari attendance berdasarkan tanggal diantara tanggal 1 dan tanggal 31
         $attendances = Attendance::latest('date')->paginate(10);
-        // $attendances = Attendance::latest('date')->paginate(10);
-        // dd($attendances);
+        
         return view('attendance.index', compact('attendances'));
     }
 
