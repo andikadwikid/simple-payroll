@@ -32,18 +32,17 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
-                                {{-- <th>Tanggal Lahir</th> --}}
                                 <th>Address</th>
                                 <th>Phone</th>
                                 <th>Email</th>
                                 <th>Division</th>
                                 <th>Action</th>
                             </tr>
+                            
                             @foreach ($employees as $employee)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $employee->name }}</td>
-                                    {{-- <td>{{ $employee->date_of_birth }}</td> --}}
                                     <td>{{ $employee->address }}</td>
                                     <td>{{ $employee->phone }}</td>
                                     <td>{{ $employee->email }}</td>
@@ -60,17 +59,7 @@
                                     </td>
                                 </tr>
                             @endforeach
-                            {{-- <td>1</td>
-                                <td>Irwansyah Saputra</td>
-                                <td>2017-01-09</td>
-                                <td>Jl. Kebon Jeruk</td>
-                                <td>08123456789</td>
-                                <td>p</td>
-                                <td>
-                                    <div class="badge badge-success">Active</div>
-                                </td>
-                                <td><a href="#" class="btn btn-secondary">Detail</a></td> --}}
-
+                          
                         </table>
                     </div>
                 </div>
